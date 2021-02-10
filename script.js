@@ -1,29 +1,53 @@
+let rock = "rock"
+let paper = "paper"
+let scissors = "scissors"
 
-function play(){
-    if(pChoice == rock.btn){
-        if(cpuChoice == rock)
+let cpuChoice = rock
+
+function play(pChoice){
+    console.log(pChoice)
+    if(pChoice == rock){
+        if(cpuChoice == rock){
+            document.getElementById("status").innerText = "Tie"
             return "Tie"
-        else if(cpuChoice == paper)
-            return "You Lose"
-        else{//scissors
-            return "You Win"
         }
-    }
-    if(pChoice == paper.btn){
-        if(cpuChoice == rock)
-            return "You Win"
-        else if(cpuChoice == paper)
-            return "Tie"
-        else{//scissors
+        else if(cpuChoice == paper){
+            document.getElementById("status").innerText = "You Lose"
             return "You Lose"
         }
-    }
-    if(pChoice == scissors.btn){
-        if(cpuChoice == rock)
-            return "You Lose"
-        else if(cpuChoice == paper)
-            return "You Win"
         else{//scissors
+            document.getElementById("status").innerText = "You Win"
+            return "You Win"
+        }
+
+    }
+    if(pChoice == paper){
+        if(cpuChoice == rock){
+            document.getElementById("status").innerText = "You Win"
+            return "You Win"
+        }
+
+        else if(cpuChoice == paper){
+            document.getElementById("status").innerText = "Tie"
+            return "Tie"
+        }
+        else{//scissors
+            document.getElementById("status").innerText = "You Lose"
+            return "You Lose"
+        }
+
+    }
+    if(pChoice == scissors){
+        if(cpuChoice == rock){
+            document.getElementById("status").innerText = "You Lose"
+            return "You Lose"
+        }
+        else if(cpuChoice == paper){
+            document.getElementById("status").innerText = "You Win"
+            return "You Win"
+        }
+        else{//scissors
+            document.getElementById("status").innerText = "Tie"
             return "Tie"
         }
     }
