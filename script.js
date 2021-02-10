@@ -2,12 +2,27 @@ let rock = "rock"
 let paper = "paper"
 let scissors = "scissors"
 
-let cpuChoice = rock
+let weapon = [
+    rock,
+    paper,
+    scissors
+]
+
+let cpuChoice = "cpuChoice"
+
+function random(){
+    cpuChoice = weapon[Math.floor(Math.random()*weapon.length)]
+    console.log("cpu chose " + cpuChoice)
+}
+
+
 
 function play(pChoice){
-    console.log(pChoice)
+    console.log("You chose " + pChoice)
+    random()
     if(pChoice == rock){
         if(cpuChoice == rock){
+            document.getElementById("cpu").innerText = "Computer chose rock"
             document.getElementById("status").innerText = "Tie"
             return "Tie"
         }
