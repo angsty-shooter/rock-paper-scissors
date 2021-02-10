@@ -1,0 +1,6 @@
+.bg-image {
+    background: url(rps.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
